@@ -1,0 +1,27 @@
+def insertionSort1(n, arr):
+    x=arr[-1]
+
+    for j in range(1,n+1):
+        try:
+            if x<arr[-1-j]:
+                arr[-j]=arr[-1-j]
+                print(*arr,sep=" ")
+            else:
+                arr[-j]=x
+                break
+        except IndexError:
+            arr[0]=x
+            break
+        
+    print(*arr,end=" ")        
+
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    insertionSort1(n, arr)
+    
