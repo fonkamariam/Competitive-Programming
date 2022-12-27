@@ -1,0 +1,20 @@
+def countSwaps(a):
+    swap=0
+    for i in range(len(a)):
+        for j in range(int(i+1),len(a)):
+            if a[i]>a[j]:
+                a[i],a[j]=a[j],a[i]
+                swap+=1
+    return (swap,a)    
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    a = list(map(int, input().rstrip().split()))
+
+    a,b=countSwaps(a)
+    print(f"Array is sorted in {a} swaps.")
+    print(f"First Element: {b[0]}")
+    print (f"Last Element: {b[-1]}")    
+
+    
