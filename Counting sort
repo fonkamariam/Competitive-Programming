@@ -1,9 +1,9 @@
 def countingSort(arr):
     
-    max=0
+    min=0
     for x in arr:
-        if x>max:
-            max=x 
+        if x>min:
+            min=x 
     r=[]
     for i in range(100):
         r.append(0)
