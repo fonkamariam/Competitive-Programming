@@ -1,0 +1,13 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        t=[*t]
+        s=[*s]
+        try:
+            if len(t)!=len(s):
+                return(False)
+            for i in range(len(s)):
+                t.remove(s[i])
+            if len(t)==0:
+                return(True)
+        except ValueError:
+            return(False)
