@@ -1,0 +1,10 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:  
+        n=len(nums)
+        s={"Haaland"}
+        for i in range(n):
+            s.add(nums[i])
+        if (len(s)-1)!=len(nums):
+            return(True)
+        else:
+            return(False)  
