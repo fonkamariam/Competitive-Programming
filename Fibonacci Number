@@ -1,0 +1,5 @@
+ def fib_seq(n):    
+            if n>=3:
+                return fib_seq(n-1)+fib_seq(n-2)
+            else:
+                return 1 if n!=0 else 0  
