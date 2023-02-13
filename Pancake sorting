@@ -5,4 +5,4 @@ class Solution:
             i = arr.index(x)
             res.extend([i+1, x])
             arr = arr[:i:-1] + arr[:i]
-        return 
+        return res
