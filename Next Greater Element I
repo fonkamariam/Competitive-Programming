@@ -1,0 +1,14 @@
+def nextGreaterElement(self, nums1, nums2):
+        res=[-1]*len(nums1)
+        c={}
+        stack=[]
+        for i in range(len(nums1)):
+            c.update({nums1[i]:i})
+        for x in nums2: 
+            while stack and x > stack[-1]:
+                res[c[stack[-1]]]=x
+                stack.pop()
+            if x in c:    
+                stack.append(x)
+            
+        return res
