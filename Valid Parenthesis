@@ -1,0 +1,15 @@
+def isValid(self, s):     
+        dic={ ')':'(','}':'{',']':'['}
+        d=[]
+        for x in s:
+            if x not in dic:
+                d.append(x)
+            else:
+                if d and d[-1]==dic[x]:
+                    d.pop()
+                else:
+                    return False
+        if not d:
+            return True
+        else:
+            return False 
