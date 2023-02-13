@@ -1,0 +1,18 @@
+ def evalRPN(self, tokens):
+        d=[]    
+        for x in tokens:
+            if x=="+":
+                d.append(d.pop()+d.pop())
+            elif x=="-":
+                a,b= d.pop(),d.pop()
+                d.append(b-a)
+            elif x=="*":
+                d.append(d.pop()*d.pop())
+            elif x=="/":
+                a,b= d.pop(),d.pop()
+                d.append(int(b/a))
+            else:
+                d.append(int(x))
+        return(d[-1])
+
+    
